@@ -1,4 +1,10 @@
+body{
+	font-family: Mohave Italic; src: url('fonts/Mohave Italic.ttf'); 
+	font-size: 18px;
+}
+
 .heading{
+	font-family: NiseSegaSonic; src: url('fonts/NiseSegaSonic.TTF'); 
 	background-color: powderblue;
 	max-height: 200px;
 }
@@ -19,4 +25,8 @@ img{
 section{
 	padding: 10px;
 	padding-top: 0px;
+}
+
+.writtenWord{
+	font-family: Rocky Monkey; src: url('fonts/Rocky Monkey.TTF'); 
 }

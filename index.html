@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 	<head>
 		<meta charset="utf-8">
 		<!--Bootstrap Setup-->
@@ -8,6 +8,33 @@
 		<!--Customs-->
 		<link rel="stylesheet" href="css/stylesheet.css">
 		<title>test</title>
+		<script>
+			var OGPlayStyle = null;
+			var StoryLine
+			var story;
+			var play;
+
+			function story(choice){story = choice;}
+
+			function play(choice){play = choice;}
+ 
+			function GameEst() {				
+				story();
+				play();
+
+				if (play == OG){var OGPlayStyle="Original";}
+				
+				else if (play == En){var OGPlayStyle="Enhanced";}
+				else {alert(Play Style not selected)}
+
+				if (story == rand){var StoryLine="Random"}
+				else if (story == sel){var StoryLine="Select"}
+				else if (story == long){var StoryLine=Long}
+				document.getElementById("playstyle").innerHTML()=
+
+			}
+
+		</script>
 	</head>
 
 	<body>
@@ -17,7 +44,7 @@
 					<img src="img/cat-icon.png" style="max-height: 200px;">
 				</div>
 				<div class="col-sm-10" align="center">
-					<h1>Gametime</h1>
+					<h1>Sonic the Hedgehog: Mad Libs</h1>
 					<h2>Home</h2>
 				</div>
 				<div class="col-sm-1">
@@ -25,37 +52,44 @@
 				</div>
 			</div>
 		</div>
-
-		<div class="choiceSections">
-			<h4>Choose your Adventure Style</h4>
-			<form style="padding-left: 20px;">
-				<input type="radio" id="ogplay" name="playstyle" value="OGPlay">
-				<label for="">Original Playstyle</label><br>
-				<input type="radio" id="enplay" name="playstyle" value="ENPlay">
-				<label for="">Enhanced Playstyle</label><br>
-			</form>
-		</div>
-
-		<div class="choiceSections">
-			<h4>Choose your Adventure Style</h4>
-			<form style="padding-left: 20px;">
-				<input type="radio" id="ogplay" name="playstyle" value="OGPlay">
-				<label for="">Original Playstyle</label><br>
-				<input type="radio" id="enplay" name="playstyle" value="ENPlay">
-				<label for="">Enhanced Playstyle</label><br>
-			</form>
-		</div>
-
-		<section>
+		<center>
+			<p>The Sonic Mad Libs experience, on the computer!	
+		</center>
+		<div class="title">
 			<form>
-				<label for="">Display:</label>
-				<input type="text" id="" name=""><br>
-				<label for="">Display:</label>
-				<input type="text" id="" name=""><br>
-				<input type="submit" value="Submit">
-				<!-- -->
+			<div class="choiceSections">
+				<h4>Choose your Play Experience</h4>
+					<input class="writtenWord" type="radio" id="ogplay" name="playstyle" value="play(OG)">
+					<label  class="writtenWord" for="ogplay">Original Playstyle</label><br>
+					<input type="radio" id="enplay" name="playstyle" value="play(En)">
+					<label for="enplay">Enhanced Playstyle</label><br>
+				<b>Original</b><br> Play the game as initially written
+	            <p><b>Enhanced</b><br>Written to be better, keeps consistency between sentences
+			</div>
+
+			<div class="choiceSections">
+				<h4>Choose your Storyline</h4>
+					<input type="radio" id="randStory" name="storyChoice" value="story(rand)">
+					<label for="randStory">Random</label><br>
+					<input type="radio" id="chooseStory" name="storyChoice" value="story(sel)">
+					<label for="chooseStory">Select by Title</label><br>
+					<input type="radio" id="longStory" name="storyChoice" value="story(long)">
+					<label for="longStory">Longplay</label><br>
+				<b>Random</b><br> Put your fate in the hands of lady luck and see which story you get
+	            </p><b>Select by Title</b><br>You can choose which story you wish to play
+	            </p><b>Longplay</b><br>For when you want a long storyline to play through
+			</div>
+			<center>
+				<input type="submit" name="sumbit" value="Submit" onclick="GameEst()">	
+			</center>
 			</form>
-		</section>
+		</div>
+
+		<div>
+			Your playstyle is: <div id="playstyle"></div>
+			Your Storyline is: <div id="storyline">
+		</div>
+		
 		
 		<footer></footer>
 	</body>
