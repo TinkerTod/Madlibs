@@ -8,33 +8,6 @@
 		<!--Customs-->
 		<link rel="stylesheet" href="css/stylesheet.css">
 		<title>test</title>
-		<script>
-			var OGPlayStyle = null;
-			var StoryLine
-			var story;
-			var play;
-
-			function story(choice){story = choice;}
-
-			function play(choice){play = choice;}
- 
-			function GameEst() {				
-				story();
-				play();
-
-				if (play == OG){var OGPlayStyle="Original";}
-				
-				else if (play == En){var OGPlayStyle="Enhanced";}
-				else {alert(Play Style not selected)}
-
-				if (story == rand){var StoryLine="Random"}
-				else if (story == sel){var StoryLine="Select"}
-				else if (story == long){var StoryLine=Long}
-				document.getElementById("playstyle").innerHTML()=
-
-			}
-
-		</script>
 	</head>
 
 	<body>
@@ -59,36 +32,45 @@
 			<form>
 			<div class="choiceSections">
 				<h4>Choose your Play Experience</h4>
-					<input class="writtenWord" type="radio" id="ogplay" name="playstyle" value="play(OG)">
-					<label  class="writtenWord" for="ogplay">Original Playstyle</label><br>
-					<input type="radio" id="enplay" name="playstyle" value="play(En)">
-					<label for="enplay">Enhanced Playstyle</label><br>
+					<input type="radio" name="playstyle" id="ogplay" value="Original Game" checked>Original Playstyle<br>
+					<input type="radio" name="playstyle" id="enplay" value="Enhanced Game">Enhanced Playstyle<br>
 				<b>Original</b><br> Play the game as initially written
 	            <p><b>Enhanced</b><br>Written to be better, keeps consistency between sentences
 			</div>
 
 			<div class="choiceSections">
 				<h4>Choose your Storyline</h4>
-					<input type="radio" id="randStory" name="storyChoice" value="story(rand)">
-					<label for="randStory">Random</label><br>
-					<input type="radio" id="chooseStory" name="storyChoice" value="story(sel)">
-					<label for="chooseStory">Select by Title</label><br>
-					<input type="radio" id="longStory" name="storyChoice" value="story(long)">
-					<label for="longStory">Longplay</label><br>
+					<input type="radio" id="randStory" name="storyChoice" value="Random" checked>Random<br>
+					<input type="radio" id="chooseStory" name="storyChoice" value="Choose Story">Select by Title<br>
+					<input type="radio" id="longStory" name="storyChoice" value="Long Story">Longplay<br>
 				<b>Random</b><br> Put your fate in the hands of lady luck and see which story you get
 	            </p><b>Select by Title</b><br>You can choose which story you wish to play
 	            </p><b>Longplay</b><br>For when you want a long storyline to play through
 			</div>
 			<center>
-				<input type="submit" name="sumbit" value="Submit" onclick="GameEst()">	
+				<button id="SetPlayBtn" onClick="GameSetup()">Submit </button>
 			</center>
 			</form>
+			<div>
+				Your Playstyle is: <span id="playStyle"> </span></br>
+				Your Storyline is: <span id="storyLine"> </span>
+			</div>
 		</div>
 
-		<div>
-			Your playstyle is: <div id="playstyle"></div>
-			Your Storyline is: <div id="storyline">
-		</div>
+		<script>
+			function GameSetup(){
+				var 
+			}
+	            
+	            // show the output:
+	            document.getElementById("playStyle").innerHTML = inputStyle? 'Play Style: ${inputStyle}' : 'Error, none selected';
+	            document.getElementById("storyLine").innerHTML = storyMode? 'Stortline: ${storyMode}' : 'Error, none selected';
+	        
+
+
+
+
+		</script>
 		
 		
 		<footer></footer>
