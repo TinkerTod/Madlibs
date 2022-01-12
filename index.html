@@ -25,54 +25,61 @@
 				</div>
 			</div>
 		</div>
-		<center>
-			<p>The Sonic Mad Libs experience, on the computer!	
-		</center>
-		<div class="title">
-			<form>
-			<div class="choiceSections">
-				<h4>Choose your Play Experience</h4>
-					<input type="radio" name="playstyle" id="ogplay" value="Original Game" checked>Original Playstyle<br>
-					<input type="radio" name="playstyle" id="enplay" value="Enhanced Game">Enhanced Playstyle<br>
-				<b>Original</b><br> Play the game as initially written
-	            <p><b>Enhanced</b><br>Written to be better, keeps consistency between sentences
-			</div>
-
-			<div class="choiceSections">
-				<h4>Choose your Storyline</h4>
-					<input type="radio" id="randStory" name="storyChoice" value="Random" checked>Random<br>
-					<input type="radio" id="chooseStory" name="storyChoice" value="Choose Story">Select by Title<br>
-					<input type="radio" id="longStory" name="storyChoice" value="Long Story">Longplay<br>
-				<b>Random</b><br> Put your fate in the hands of lady luck and see which story you get
-	            </p><b>Select by Title</b><br>You can choose which story you wish to play
-	            </p><b>Longplay</b><br>For when you want a long storyline to play through
-			</div>
-			<center>
-				<button id="SetPlayBtn" onClick="GameSetup()">Submit </button>
-			</center>
+		<center><p>The Sonic Mad Libs experience, on the computer!</p></center>
+		
+		<div class="choiceSections">
+			<h4><u>Choose your Play Experience</u></h4>
+			<form id="playForm">
+				<input type="radio" name="playRadio" id="ogplay" value="Original Game" checked/> Original Playstyle<br>
+				<input type="radio" name="playRadio" id="enplay" value="Enhanced Game"/> Enhanced Playstyle<br>
 			</form>
-			<div>
-				Your Playstyle is: <span id="playStyle"> </span></br>
-				Your Storyline is: <span id="storyLine"> </span>
-			</div>
+				<b class="writtenWord">Original</b><br> Play the game as initially written<br>
+		        <b class="writtenWord">Enhanced</b><br>Written to be better, keeps consistency between sentences
 		</div>
 
-		<script>
-			function GameSetup(){
-				var 
+		<div class="choiceSections">
+			<h4><u>Choose your Storyline</u></h4>
+			<form id="storyForm">
+				<input type="radio" id="randStory" name="storyChoice" value="Random" checked/> Random<br>
+				<input type="radio" id="chooseStory" name="storyChoice" value="Choose Story"/> Select by Title<br>
+				<input type="radio" id="longStory" name="storyChoice" value="Long Story"/> Longplay<br>
+			</form>
+			<b>Random</b><br> Put your fate in the hands of lady luck and see which story you get<br>
+			<b>Select by Title</b><br>You can choose which story you wish to play<br>
+		    <b>Longplay</b><br>For when you want a long storyline to play through<br>
+		</div>
+
+		<center>
+			<button id="SetPlayBtn">Submit </button>
+		</center>
+		<div>
+			Your Playstyle is: <span id=""> </span></br>
+			Your Storyline is: <span id=""> </span>
+		</div>
+
+	<script>
+		var playRadios = document.forms["playForm"].elements["playRadio"];
+		for (var i = 0, max = playRadios.length; i < max; i++){
+			playRadios[i].onclick = function(){
+				var inputStyle = this.value;
+				alert(inputStyle);
+				if (inputStyle == "Original Game"){originalGame=true;}
+				else{originalGame=false;}
 			}
-	            
-	            // show the output:
-	            document.getElementById("playStyle").innerHTML = inputStyle? 'Play Style: ${inputStyle}' : 'Error, none selected';
-	            document.getElementById("storyLine").innerHTML = storyMode? 'Stortline: ${storyMode}' : 'Error, none selected';
-	        
+		}
 
-
-
-
-		</script>
+		var playRadios = document.forms["playForm"].elements["playRadio"];
+		for (var i = 0, max = playRadios.length; i < max; i++){
+			playRadios[i].onclick = function(){
+				var inputStyle = this.value;
+				alert(inputStyle);
+				if (inputStyle == "Original Game"){originalGame=true;}
+				else{originalGame=false;}
+			}
+		}
+	</script>
 		
 		
-		<footer></footer>
+	<footer></footer>
 	</body>
 </html>
