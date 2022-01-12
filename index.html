@@ -27,26 +27,35 @@
 		</div>
 		<center><p>The Sonic Mad Libs experience, on the computer!</p></center>
 		
-		<div class="choiceSections">
-			<h4><u>Choose your Play Experience</u></h4>
-			<form id="playForm">
-				<input type="radio" name="playRadio" id="ogplay" value="Original Game" checked/> Original Playstyle<br>
-				<input type="radio" name="playRadio" id="enplay" value="Enhanced Game"/> Enhanced Playstyle<br>
-			</form>
-				<b class="writtenWord">Original</b><br> Play the game as initially written<br>
-		        <b class="writtenWord">Enhanced</b><br>Written to be better, keeps consistency between sentences
-		</div>
-
-		<div class="choiceSections">
-			<h4><u>Choose your Storyline</u></h4>
-			<form id="storyForm">
-				<input type="radio" id="randStory" name="storyChoice" value="Random" checked/> Random<br>
-				<input type="radio" id="chooseStory" name="storyChoice" value="Choose Story"/> Select by Title<br>
-				<input type="radio" id="longStory" name="storyChoice" value="Long Story"/> Longplay<br>
-			</form>
-			<b>Random</b><br> Put your fate in the hands of lady luck and see which story you get<br>
-			<b>Select by Title</b><br>You can choose which story you wish to play<br>
-		    <b>Longplay</b><br>For when you want a long storyline to play through<br>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<h4><u>Choose your Play Experience</u></h4>
+					<form id="playForm">
+						<input type="radio" name="playRadio" id="ogplay" value="Original Game" checked/> Original Playstyle<br>
+						<input type="radio" name="playRadio" id="enplay" value="Enhanced Game"/> Enhanced Playstyle<br>
+					</form>
+				</div>
+				<div class="col-sm-6">
+					<h4><u>Choose your Storyline</u></h4>
+					<form id="storyForm">
+						<input type="radio" name="storyChoice" id="randStory" value="Random" checked/> Random<br>
+						<input type="radio" name="storyChoice" id="chooseStory" value="Choose Story"/> Select by Title<br>
+						<input type="radio" name="storyChoice" id="longStory" value="Long Story"/> Longplay<br>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<b>Original</b><br> Play the game as initially written<br>
+		        	<b>Enhanced</b><br>Written to be better, keeps consistency between sentences
+				</div>
+				<div class="col-sm-6">
+					<b>Random</b><br> Put your fate in the hands of lady luck and see which story you get<br>
+					<b>Select by Title</b><br>You can choose which story you wish to play<br>
+				    <b>Longplay</b><br>For when you want a long storyline to play through<br>
+				</div>
+			</div>
 		</div>
 
 		<center>
@@ -62,19 +71,24 @@
 		for (var i = 0, max = playRadios.length; i < max; i++){
 			playRadios[i].onclick = function(){
 				var inputStyle = this.value;
-				alert(inputStyle);
+				//alert(inputStyle);
+
 				if (inputStyle == "Original Game"){originalGame=true;}
 				else{originalGame=false;}
+				//alert(originalGame)
 			}
 		}
 
-		var playRadios = document.forms["playForm"].elements["playRadio"];
-		for (var i = 0, max = playRadios.length; i < max; i++){
-			playRadios[i].onclick = function(){
-				var inputStyle = this.value;
-				alert(inputStyle);
-				if (inputStyle == "Original Game"){originalGame=true;}
-				else{originalGame=false;}
+		var storyRadios = document.forms["storyForm"].elements["storyChoice"];
+		for (var i = 0, max = storyRadios.length; i < max; i++){
+			storyRadios[i].onclick = function(){
+				var storyStyle = this.value;
+				//alert(storyStyle);
+
+				if (storyStyle == "randStory"){storyType=1;}
+				else if(storyStyle == "Choose Story"){storyType=2;}
+				else{storyType=3;}
+				//alert(storyType);
 			}
 		}
 	</script>
