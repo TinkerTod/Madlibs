@@ -103,12 +103,19 @@
 
 		var SetPlayBtn = document.getElementById("SetPlayBtn");
 		SetPlayBtn.onclick = function(){
-			alert(originalGame);
-			alert(storyType);
+			//alert(originalGame);
+			//alert(storyType);
 			if (storyType == 1){
 				randNum = Math.floor(Math.random()*21)+1;
 				storyNo == "stor"+randNum;
 				alert(storyNo);
+			}
+			else if (storyType == 2){
+				alert("StorySelect");
+			}
+
+			else {
+				alert("Long");
 			}
 		}
 
