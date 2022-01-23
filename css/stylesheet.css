@@ -1,14 +1,37 @@
+/*
+* Sonic Mad Libs Basic Stylesheet
+* Made by Ashleigh Ward
+*/
+
+/* Set the Fonts of the Game */
 body{
 	font-family: Mohave Italic; src: url('fonts/Mohave Italic.ttf'); 
 	font-size: 18px;
 	padding: 0px;
-	margin: 0px;
+	margin: 0px;2
+}
+
+.writtenWord{
+	font-family: Rocky Monkey; src: url('fonts/Rocky Monkey.TTF'); 
+}
+
+.spacePad{
+	padding-left: 5%;
+}
+
+/* Heading setup */
+.headImage{
+	width: 15%;
+	max-height: 100px;
+	max-width: 100px;
 }
 
 .heading{
 	font-family: NiseSegaSonic; src: url('fonts/NiseSegaSonic.TTF'); 
 	max-height: 220px;
+	width: 100%;
 }
+
 
 img{
 	max-width: 100%;
@@ -21,20 +44,11 @@ section{
 	padding-top: 0px;
 }
 
-.writtenWord{
-	font-family: Rocky Monkey; src: url('fonts/Rocky Monkey.TTF'); 
-}
-
-.spacePad{
-	padding-left: 5%;
-}
-
 .inputSection{
+	margin-top: 10px;
 	background-color: lightgrey;
 	min-width: 20px;
 	max-width: 400px;
-	min-height: 100%;
-	max-height: 500px;
 }
 
 .submitButton{

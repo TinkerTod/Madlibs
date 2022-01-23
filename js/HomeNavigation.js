@@ -42,11 +42,11 @@ SetPlayBtn.onclick = function(){
 	}
 	else if (storyType == 2){
 		alert("StorySelect");
-		document.getElementById("StorySelect").style.display= 'block';
+		window.location.href = 'html/story_select.html';
 	}
 	else {
 		alert("Long");
-		if(originalGame==true){document.getElementById("enLongStory").style.display='block';}
+		if(originalGame==true){window.location.href = 'html/Stories/og_long.html';}
 		else{document.getElementById("enLongStory").style.display='block';}
 	}
 }

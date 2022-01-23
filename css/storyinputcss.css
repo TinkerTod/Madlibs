@@ -1,0 +1,12 @@
+/*
+* Sonic Mad Libs Basic Stylesheet
+* Made by Ashleigh Ward
+*/
+
+.inputSection{
+	margin-top: 10px!important;
+	background-color: lightgrey;
+	min-width: 20px!important;
+	max-width: 400px!important;
+	padding-left: 5%!important;
+}
