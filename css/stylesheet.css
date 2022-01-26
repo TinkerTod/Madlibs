@@ -54,7 +54,16 @@ section{
 .submitButton{
 	padding: 10px;
 	font-size: 20px;
+	color: black;
 	background-color: powderblue;
+	border: 1px solid black;
+}
+
+.submitButton:hover{
+	text-decoration: none;
+	color: black;
+	background-color: lightgrey;
+	border: 1px solid black;
 }
 
 .collapsible {

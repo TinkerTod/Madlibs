@@ -47,6 +47,6 @@ SetPlayBtn.onclick = function(){
 	else {
 		alert("Long");
 		if(originalGame==true){window.location.href = 'html/Stories/og_long.html';}
-		else{document.getElementById("enLongStory").style.display='block';}
+		else{window.location.href = 'html/Stories/en_long.html';}
 	}
 }

@@ -10,3 +10,17 @@
 	max-width: 400px!important;
 	padding-left: 5%!important;
 }
+
+.answer{
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.paddingSection{
+	margin-top: 5%;
+}
+
+a{
+	margin-left: 10px;
+	align-items: center;
+}
