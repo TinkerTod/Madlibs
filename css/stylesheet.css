@@ -4,15 +4,36 @@
 */
 
 /* Set the Fonts of the Game */
+@font-face {
+	font-family: "Mohave Italic"; 
+	src: url('../fonts/Mohave Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Rocky Monkey"; 
+	src: url('../fonts/Rocky Monkey.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	font-family: "NiseSegaSonic";
+	src: url('../fonts/NiseSegaSonic.TTF') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 body{
-	font-family: Mohave Italic; src: url('fonts/Mohave Italic.ttf'); 
+	font-family: "Mohave Italic";
 	font-size: 18px;
 	padding: 0px;
-	margin: 0px;2
+	margin: 0px;
 }
 
 .writtenWord{
-	font-family: Rocky Monkey; src: url('fonts/Rocky Monkey.TTF'); 
+	font-family: "Rocky Monkey"; 
+	font-size: 18px;
 }
 
 .spacePad{
@@ -27,7 +48,7 @@ body{
 }
 
 .heading{
-	font-family: NiseSegaSonic; src: url('fonts/NiseSegaSonic.TTF'); 
+	font-family: "NiseSegaSonic";
 	max-height: 220px;
 	width: 100%;
 }
@@ -42,6 +63,11 @@ img{
 section{
 	padding: 10px;
 	padding-top: 0px;
+}
+
+.inputtable{
+	padding-left: 2px;
+	width: 50%;
 }
 
 .inputSection{

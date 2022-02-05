@@ -10,7 +10,7 @@ for (var i = 0, max = playRadios.length; i < max; i++){
 
 		if (inputStyle == "Original Game"){originalGame=true;}
 		else{originalGame=false;}
-		alert(originalGame);
+		//alert(originalGame);
 	}
 }
 
@@ -24,7 +24,7 @@ for (var i = 0, max = storyRadios.length; i < max; i++){
 		if (storyStyle == "randStory"){storyType=1;}
 		else if(storyStyle == "Choose Story"){storyType=2;}
 		else{storyType=3;}
-		alert(storyType);
+		//alert(storyType);
 	}
 }
 
@@ -41,11 +41,11 @@ SetPlayBtn.onclick = function(){
 		document.getElementById(storyNo).style.display='block';
 	}
 	else if (storyType == 2){
-		alert("StorySelect");
+		//alert("StorySelect");
 		window.location.href = 'html/story_select.html';
 	}
 	else {
-		alert("Long");
+		//alert("Long");
 		if(originalGame==true){window.location.href = 'html/Stories/og_long.html';}
 		else{window.location.href = 'html/Stories/en_long.html';}
 	}
