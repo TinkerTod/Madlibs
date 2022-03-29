@@ -1,5 +1,5 @@
 /*
-*	This checked over the 
+*	Check over the submission to make sure that 
 */
 function checking() {
 	var empty = 0;
@@ -83,5 +83,5 @@ var startBtn = document.getElementById("startBtn");
 startBtn.onclick = function(){
 	checking();
 	appendData();
-	text2speech()
+	text2speech();
 }
